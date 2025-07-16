@@ -6,7 +6,7 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/noah-portfolio",
+  base: "/nrogers98.github.io/",
   resolve: {
     alias: {
       // eslint-disable-next-line no-undef
