@@ -1,7 +1,7 @@
 import { Home } from "./pages/Home"
 import { NotFound } from "./pages/NotFound"
 import { HashRouter, Routes, Route} from "react-router-dom"
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/toaster.jsx";
 
 function App() {
 
