@@ -128,7 +128,7 @@
 }
 
 @utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply transition-transform duration-300 hover:scale-[1.08] hover:shadow-lg;
 }
 
 @utility gradient-border {
@@ -160,9 +160,25 @@
   box-shadow: -50px 0 180px 15px rgba(255,255,255, 0.4);
 }
 
+@utility carousel-btn {
+  @apply block absolute top-0 bottom-0 p-1 cursor-pointer
+         transition-[background-color] ease-in-out duration-100
+         hover:bg-black/20;
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+.skill-level-good{
+  font-size: 20pt;
+  color: rgb(6, 165, 6) 
+}
+
+.skill-level-fair{
+  font-size: 20pt;
+  color:rgb(210, 223, 37)
 }

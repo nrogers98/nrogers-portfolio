@@ -1,4 +1,5 @@
 import { Briefcase, Code, User } from "lucide-react"
+import { HashLink } from "react-router-hash-link"
 
 export const AboutSection = () => {
     return (
@@ -18,9 +19,9 @@ export const AboutSection = () => {
                     </p>
 
                     <div className="flex flec-col sm:flex-row gap-4 pt-4 justify-center">
-                        <a href="#contact" className="cosmic-button">
+                        <HashLink to="#contact" className="cosmic-button">
                             Get In Touch
-                        </a>
+                        </HashLink>
 
                         <a href="https://drive.google.com/uc?export=download&id=1eiUFy8OUJK3yeUW8ht4PzTFeff5XilU7" className="void-button">
                             Download CV

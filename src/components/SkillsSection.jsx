@@ -1,32 +1,49 @@
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import html from "@/images/icons/html.svg"
+import css from "@/images/icons/css.svg"
+import javascript from "@/images/icons/javascript.svg"
+import typescript from "@/images/icons/typescript.svg"
+import react from "@/images/icons/react.svg"   
+import node from "@/images/icons/nodejs.svg"
+import mongodb from "@/images/icons/mongodb.svg"
+import postgres from "@/images/icons/postgresql.svg"
+import mysql from "@/images/icons/mysql.svg"
+import php from "@/images/icons/php.png"
+import git from "@/images/icons/git.svg"
+import docker from "@/images/icons/docker.svg"
+import vscode from "@/images/icons/vscode.svg"
+import csharp from "@/images/icons/csharp.svg"
+import java from "@/images/icons/java.svg"
+import python from "@/images/icons/python.svg"
+import go from "@/images/icons/go.svg"
+
 
 const skills = [
     // Frontend
-    { name: "HTML/CSS", level: 95, category: "frontend" },
-    { name: "JavaScript", level: 90, category: "frontend" },     
-    { name: "React", level: 95, category: "frontend" },    
-    { name: "Tailwind CSS", level: 95, category: "frontend" },    
-    { name: "Next.js", level: 95, category: "frontend" },
+    { name: "HTML", icon: html, category: "frontend", usability: "good"},
+    { name: "CSS", icon: css, category: "frontend", usability: "good"},
+    { name: "JavaScript", icon: javascript, category: "frontend", usability: "good" },    
+    { name: "Typescript", icon: typescript, category: "frontend", usability: "fair" }, 
+    { name: "React", icon: react, category: "frontend", usability: "good" },    
 
     // Backend
-    { name: "Node.js", level: 95, category: "backend" },    
-    { name: "Express", level: 95, category: "backend" },    
-    { name: "MongoDB", level: 95, category: "bcakend" },    
-    { name: "PostgresSQL", level: 95, category: "backend" },    
-    { name: "MySql", level: 95, category: "backend" },
-    { name: "PHP", level: 95, category: "backend"},
+    { name: "Node.js", icon: node, category: "backend", usability: "good" },    
+    { name: "MongoDB", icon: mongodb, category: "bcakend", usability: "fair" },    
+    { name: "PostgresSQL", icon: postgres, category: "backend", usability: "fair" },    
+    { name: "MySql", icon: mysql, category: "backend", usability: "good" },
+    { name: "PHP", icon: php, category: "backend", usability: "good"},
 
     //Tools
-    { name: "Git/Github", level: 95, category: "tools" },    
-    { name: "Docker", level: 95, category: "tools" },
-    { name: "VS Code", level: 95, category: "tools" },    
-    { name: "Postman", level: 95, category: "tools" },    
+    { name: "Git/Github", icon: git, category: "tools", usability: "good" },    
+    { name: "Docker", icon: docker, category: "tools", usability: "fair" },
+    { name: "VS Code", icon: vscode, category: "tools", usability: "good" },    
 
     //Languages
-    { name: "C#", level: 95, category: "languages" },    
-    { name: "Java", level: 95, category: "languages" },
-    { name: "Python", level: 95, category: "languages" },  
+    { name: "C#", icon: csharp, category: "languages", usability: "good" },    
+    { name: "Java", icon: java, category: "languages", usability: "good" },
+    { name: "Python", icon: python, category: "languages", usability: "good" },  
+    { name: "Go", icon: go, category: "languages", usability: "fair" },  
 ];
 
 const categories = ["all", "frontend", "backend", "tools", "languages"];
@@ -65,20 +82,16 @@ export const SkillsSection = () => {
                     {filteredSkills.map((skill, key) => (
                         <div 
                             key={key}
-                            className="bg-card p-6 rounded-lg shadow-xs card-hover"
+                            className="bg-card p-6 rounded-lg shadow-xs card-hover flex flex-col"
                         >
                             <div className="text-left mb-4">
                                 <h3 className="font-semibold text-lg">{skill.name}</h3>
+                                <svg className="">
+                                    <image className="w-70 h-40" xlinkHref={skill.icon}/>
+                                </svg>
                             </div>
-                            <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                                <div
-                                    className="bg-primary h-2 rounded-full origin-left animate[grow_1.5s_ease-out]"
-                                    style={{width: skill.level + "%"}}
-                                />
-                            </div>
-
-                            <div className="text-right mt-1">
-                                <span className="font-semibold text-lg">{skill.name}</span>
+                            <div className="text-center mt-1">
+                                <span className={`font-bold text-lg skill-level-${skill.usability}`}>{skill.usability}</span>
                             </div>
                         </div>
                     ))}

@@ -1,4 +1,5 @@
 import { ArrowBigDown } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 
 export const HomeSection = () => {
     return( 
@@ -19,14 +20,14 @@ export const HomeSection = () => {
             </div>
 
             <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                <a href="#projects" className="cosmic-button">
+                <HashLink to="#projects" className="cosmic-button">
                     View My Work
-                </a>
+                </HashLink>
             </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-            <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
+            <span className="text-sm text-muted-foreground mb-2">Scroll</span>
             <ArrowBigDown className="h-5 w-5 text-primary"></ArrowBigDown>        
         </div>
     </section>

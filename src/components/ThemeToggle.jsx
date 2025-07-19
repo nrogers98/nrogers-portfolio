@@ -1,6 +1,7 @@
-import {Moon, Store, Sun} from "lucide-react"
+import {Moon, Sun} from "lucide-react"
 import { useEffect, useState } from "react";
 import { cn } from '@/lib/utils.js';
+
 
 export const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -16,6 +17,10 @@ export const ThemeToggle = () => {
         }
     }, []);
 
+    const event = new CustomEvent("themeChanged", {
+        detail: { message: 'The theme was changed' }
+    })
+
     const toggleTheme = () => {
         if(isDarkMode) {
             document.documentElement.classList.remove("dark");
@@ -26,11 +31,13 @@ export const ThemeToggle = () => {
             localStorage.setItem("theme", "dark");
             setIsDarkMode(true);
         }
+        document.dispatchEvent(event)
     };
         
     return (
         <button 
             onClick={toggleTheme}
+            id="theme-btn"
             className={cn(
                 "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
                 "focus:outlin-hidden"
