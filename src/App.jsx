@@ -6,21 +6,15 @@ import { Toaster } from "@/components/ui/toaster.jsx";
 function App() {
 
   return (
-    <>
+    <section className="App">
       <Toaster />
       <HashRouter>
         <Routes>
-          <Route 
-            path="/home" 
-            element={<Home />}
-          />
-          <Route 
-            path="*" 
-            element={<NotFound />} 
-          />
+          <Route path="/home" element={<Home />}/>
+          <Route path="*" element={<NotFound />}/>
         </Routes>
       </HashRouter>
-    </>
+    </section>
   )
 }
 
