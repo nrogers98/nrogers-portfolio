@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Toaster />
-      <HashRouter basename="/nrogers-portfolio/">
+      <HashRouter>
         <Routes>
           <Route 
             path="/home" 
