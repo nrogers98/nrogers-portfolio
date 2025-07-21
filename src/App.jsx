@@ -8,7 +8,7 @@ function App() {
   return (
     <section className="App">
       <Toaster />
-      <HashRouter basename="/nrogers-portfolio/">
+      <HashRouter basename="/">
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="*" element={<NotFound />}/>
