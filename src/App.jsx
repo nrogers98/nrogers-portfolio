@@ -8,9 +8,11 @@ function App() {
   return (
     <section className="App">
       <Toaster />
-      <HashRouter>
+      <HashRouter
+        basename={import.meta.env.DEV ? '/' : '/nrogers-portfolio'}
+      >
         <Routes>
-          <Route path="/home" element={<Home />}/>
+          <Route path="/" element={<Home />}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>
       </HashRouter>
