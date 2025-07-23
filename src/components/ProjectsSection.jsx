@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react"
 import { Carousel } from "@/components/ui/Carousel"
-import img1 from "@/images/bae.PNG"
+import img1 from "@/images/projects/bowling_tournament/bowling_login.PNG"
 import img2 from "@/images/benjamin.jpg"
 import img3 from "@/images/captcha.PNG"
 
@@ -9,10 +9,10 @@ const IMAGES = [img1, img2, img3]
 const projects = [
     {
         id: 1,
-        title: "placeholder",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim sit, esse maiores hic ex cumque minus? Dolorem ipsum, nisi laudantium officia sint quaerat, possimus, tenetur repellat incidunt animi unde libero!",
+        title: "Bowling Tournament Tracker APP",
+        description: "An application for tracking progress for a bowling tournament. Guest users can view tournament standings and game information where as organizers can login as 'scorekeepers' or 'admin' to score games or generate matchups for the next rounds respectively.",
         image: img1,
-        tags: ["React", "TailwindCSS", "Go"],
+        tags: ["HTML/CSS", "Bootstrap", "PHP", "Javascript", "MySQL"],
         demoUrl: "#",
         githubUrl: "#"
     },
